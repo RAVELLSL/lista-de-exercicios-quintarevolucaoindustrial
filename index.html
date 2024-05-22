@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caderno de Exercícios</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .sidebar h2 {
+    margin-top: 0;
+    color: #fff;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+
+  form {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  h3 {
+    margin-top: 20px;
+    color: #333;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+  }
+
+  button:hover {
+    background-color: #23272b;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-content h2 {
+    margin-top: 0;
+  }
+
+  .modal-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .modal-content li {
+    margin-bottom: 5px;
+  }
+
+  .modal-content button {
+    padding: 8px 15px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .modal-content button:hover {
+    background-color: #23272b;
+  }
+
+  @media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .sidebar {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 20px;
+    }
+
+    .main-content {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="main-content" id="main-content">
+    <h1>Caderno de Exercícios</h1>
+    <form id="exercises-form">
+      <p>1. Qual tecnologia é considerada como a base da Quinta Revolução Industrial?</p>
+      <label><input type="radio" name="q1" value="a"> a) Rede 6G</label>
+      <label><input type="radio" name="q1" value="b"> b) Internet Quântica</label>
+      <label><input type="radio" name="q1" value="c"> c) Impressão 4D</label>
+      <label><input type="radio" name="q1" value="d"> d) Gêmeo Digital</label>
+      <label><input type="radio" name="q1" value="e"> e) Armazenamento em DNA</label>
+
+      <p>2. Qual das seguintes opções é um exemplo de aplicação da AIoT (Inteligência Artificial das Coisas)?</p>
+      <label><input type="radio" name="q2" value="a"> a) Impressão 4D</label>
+      <label><input type="radio" name="q2" value="b"> b) Metamateriais</label>
+      <label><input type="radio" name="q2" value="c"> c) Transmissão de Energia Sem Fio</label>
+      <label><input type="radio" name="q2" value="d"> d) Tecnologia de Predição</label>
+      <label><input type="radio" name="q2" value="e"> e) Comida Sintética</label>
+
+      <p>3. O que significa o termo "Web 3.0" no contexto da Quinta Revolução Industrial?</p>
+      <label><input type="radio" name="q3" value="a"> a) Interface Cérebro-Máquina</label>
+      <label><input type="radio" name="q3" value="b"> b) Metaverso</label>
+      <label><input type="radio" name="q3" value="c"> c) Rede 6G</label>
+      <label><input type="radio" name="q3" value="d"> d) Realidade Háptica</label>
+      <label><input type="radio" name="q3" value="e"> e) Smart Glass</label>
+
+      <p>4. Qual dessas tecnologias está relacionada ao conceito de Smart Grid?</p>
+      <label><input type="radio" name="q4" value="a"> a) Robótica de Drone</label>
+      <label><input type="radio" name="q4" value="b"> b) Drones Aquáticos</label>
+      <label><input type="radio" name="q4" value="c"> c) Cidades Inteligentes</label>
+      <label><input type="radio" name="q4" value="d"> d) Metamateriais</label>
+      <label><input type="radio" name="q4" value="e"> e) Quinta Revolução Industrial</label>
+
+      <p>5. O que é um Gêmeo Digital?</p>
+      <label><input type="radio" name="q5" value="a"> a) Uma forma avançada de Armazenamento em DNA</label>
+      <label><input type="radio" name="q5" value="b"> b) Uma tecnologia de Predição altamente precisa</label>
+      <label><input type="radio" name="q5" value="c"> c) Uma representação virtual de um objeto físico</label>
+      <label><input type="radio" name="q5" value="d"> d) Uma forma de Comida Sintética</label>
+      <label><input type="radio" name="q5" value="e"> e) Uma interface de Realidade Háptica</label>
+
+      <p>6. Qual tecnologia possibilita a transmissão de energia sem a necessidade de fios?</p>
+      <label><input type="radio" name="q6" value="a"> a) Internet Quântica</label>
+      <label><input type="radio" name="q6" value="b"> b) Transmissão de Energia Sem Fio</label>
+      <label><input type="radio" name="q6" value="c"> c) Metaverso</label>
+      <label><input type="radio" name="q6" value="d"> d) Smart Glass</label>
+      <label><input type="radio" name="q6" value="e"> e) AIoT</label>
+
+      <p>7. O que são Cidades Inteligentes?</p>
+      <label><input type="radio" name="q7" value="a"> a) Locais onde se desenvolvem Metamateriais</label>
+      <label><input type="radio" name="q7" value="b"> b) Áreas de produção de Comida Sintética</label>
+      <label><input type="radio" name="q7" value="c"> c) Centros urbanos com infraestrutura conectada e tecnologicamente avançada</label>
+      <label><input type="radio" name="q7" value="d"> d) Ambientes com Interface Cérebro-Máquina</label>
+      <label><input type="radio" name="q7" value="e"> e) Espaços com Realidade Háptica</label>
+
+      <p>8. Qual das seguintes opções descreve melhor a tecnologia de Impressão 4D?</p>
+      <label><input type="radio" name="q8" value="a"> a) Impressão de objetos usando DNA como material base</label>
+      <label><input type="radio" name="q8" value="b"> b) Impressão de objetos que mudam de forma ou função com o tempo</label>
+      <label><input type="radio" name="q8" value="c"> c) Impressão de objetos usando redes 6G para comunicação</label>
+      <label><input type="radio" name="q8" value="d"> d) Impressão de objetos com tecnologia de predição integrada</label>
+      <label><input type="radio" name="q8" value="e"> e) Impressão de objetos com interface cérebro-máquina</label>
+
+      <p>9. O que são Metamateriais?</p>
+      <label><input type="radio" name="q9" value="a"> a) Materiais produzidos por impressão 4D</label>
+      <label><input type="radio" name="q9" value="b"> b) Materiais sintéticos usados na produção de comida</label>
+      <label><input type="radio" name="q9" value="c"> c) Materiais que têm propriedades não encontradas na natureza</label>
+      <label><input type="radio" name="q9" value="d"> d) Materiais usados na construção de cidades inteligentes</label>
+      <label><input type="radio" name="q9" value="e"> e) Materiais utilizados na tecnologia de predição</label>
+
+      <p>10. Qual é o objetivo da tecnologia de Armazenamento em DNA?</p>
+      <label><input type="radio" name="q10" value="a"> a) Armazenar grandes quantidades de dados de forma durável e compacta</label>
+      <label><input type="radio" name="q10" value="b"> b) Produzir energia sem fio para uso em drones aquáticos</label>
+      <label><input type="radio" name="q10" value="c"> c) Desenvolver alimentos sintéticos com melhor sabor e textura</label>
+      <label><input type="radio" name="q10" value="d"> d) Criar interfaces cérebro-máquina para controle de dispositivos</label>
+      <label><input type="radio" name="q10" value="e"> e) Construir cidades inteligentes usando metamateriais</label>
+      <button type="button" onclick="checkAnswers()">Responder</button>
+    </form>
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Sua Pontuação</h2>
+    <p id="score"></p>
+    <h3>Respostas Corretas</h3>
+    <ul id="correct-answers"></ul>    
+    <button onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+    function loadContent(theme) {
+  const mainContent = document.getElementById('main-content');
+  let content = '';
+
+  switch (theme) {
+    case 'quinta_revolucao_industrial':
+      content += '<h1>Quinta Revolução Industrial</h1>';
+      content += '<form id="exercises-form">';
+      content += '<p>1. Qual tecnologia é considerada como a base da Quinta Revolução Industrial?</p>';
+      content += '<label><input type="radio" name="q1" value="a"> a) Rede 6G</label>';
+      content += '<label><input type="radio" name="q1" value="b"> b) Internet Quântica</label>';
+      content += '<label><input type="radio" name="q1" value="c"> c) Impressão 4D</label>';
+      content += '<label><input type="radio" name="q1" value="d"> d) Gêmeo Digital</label>';
+      content += '<label><input type="radio" name="q1" value="e"> e) Armazenamento em DNA</label>';
+      content += '<p>2. Qual das seguintes opções é um exemplo de aplicação da AIoT (Inteligência Artificial das Coisas)?</p>';
+      content += '<label><input type="radio" name="q2" value="a"> a) Impressão 4D</label>';
+      content += '<label><input type="radio" name="q2" value="b"> b) Metamateriais</label>';
+      content += '<label><input type="radio" name="q2" value="c"> c) Transmissão de Energia Sem Fio</label>';
+      content += '<label><input type="radio" name="q2" value="d"> d) Tecnologia de Predição</label>';
+      content += '<label><input type="radio" name="q2" value="e"> e) Comida Sintética</label>';
+      content += '<p>3. O que significa o termo "Web 3.0" no contexto da Quinta Revolução Industrial?</p>';
+      content += '<label><input type="radio" name="q3" value="a"> a) Interface Cérebro-Máquina</label>';
+      content += '<label><input type="radio" name="q3" value="b"> b) Metaverso</label>';
+      content += '<label><input type="radio" name="q3" value="c"> c) Rede 6G</label>';
+      content += '<label><input type="radio" name="q3" value="d"> d) Realidade Háptica</label>';
+      content += '<label><input type="radio" name="q3" value="e"> e) Smart Glass</label>';
+      content += '<p>4. Qual dessas tecnologias está relacionada ao conceito de Smart Grid?</p>';
+      content += '<label><input type="radio" name="q4" value="a"> a) Robótica de Drone</label>';
+      content += '<label><input type="radio" name="q4" value="b"> b) Drones Aquáticos</label>';
+      content += '<label><input type="radio" name="q4" value="c"> c) Cidades Inteligentes</label>';
+      content += '<label><input type="radio" name="q4" value="d"> d) Metamateriais</label>';
+      content += '<label><input type="radio" name="q4" value="e"> e) Quinta Revolução Industrial</label>';
+      content += '<p>5. O que é um Gêmeo Digital?</p>';
+      content += '<label><input type="radio" name="q5" value="a"> a) Uma forma avançada de Armazenamento em DNA</label>';
+      content += '<label><input type="radio" name="q5" value="b"> b) Uma tecnologia de Predição altamente precisa</label>';
+      content += '<label><input type="radio" name="q5" value="c"> c) Uma representação virtual de um objeto físico</label>';
+      content += '<label><input type="radio" name="q5" value="d"> d) Uma forma de Comida Sintética</label>';
+      content += '<label><input type="radio" name="q5" value="e"> e) Uma interface de Realidade Háptica</label>';
+      content += '<p>6. Qual tecnologia possibilita a transmissão de energia sem a necessidade de fios?</p>';
+      content += '<label><input type="radio" name="q6" value="a"> a) Internet Quântica</label>';
+      content += '<label><input type="radio" name="q6" value="b"> b) Transmissão de Energia Sem Fio</label>';
+      content += '<label><input type="radio" name="q6" value="c"> c) Metaverso</label>';
+      content += '<label><input type="radio" name="q6" value="d"> d) Smart Glass</label>';
+      content += '<label><input type="radio" name="q6" value="e"> e) AIoT</label>';
+      content += '<p>7. O que são Cidades Inteligentes?</p>';
+      content += '<label><input type="radio" name="q7" value="a"> a) Locais onde se desenvolvem Metamateriais</label>';
+      content += '<label><input type="radio" name="q7" value="b"> b) Áreas de produção de Comida Sintética</label>';
+      content += '<label><input type="radio" name="q7" value="c"> c) Centros urbanos com infraestrutura conectada e tecnologicamente avançada</label>';
+      content += '<label><input type="radio" name="q7" value="d"> d) Ambientes com Interface Cérebro-Máquina</label>';
+      content += '<label><input type="radio" name="q7" value="e"> e) Espaços com Realidade Háptica</label>';
+      content += '<p>8. Qual das seguintes opções descreve melhor a tecnologia de Impressão 4D?</p>';
+      content += '<label><input type="radio" name="q8" value="a"> a) Impressão de objetos usando DNA como material base</label>';
+      content += '<label><input type="radio" name="q8" value="b"> b) Impressão de objetos que mudam de forma ou função com o tempo</label>';
+      content += '<label><input type="radio" name="q8" value="c"> c) Impressão de objetos usando redes 6G para comunicação</label>';
+      content += '<label><input type="radio" name="q8" value="d"> d) Impressão de objetos com tecnologia de predição integrada</label>';
+      content += '<label><input type="radio" name="q8" value="e"> e) Impressão de objetos com interface cérebro-máquina</label>';
+      content += '<p>9. O que são Metamateriais?</p>';
+      content += '<label><input type="radio" name="q9" value="a"> a) Materiais produzidos por impressão 4D</label>';
+      content += '<label><input type="radio" name="q9" value="b"> b) Materiais sintéticos usados na produção de comida</label>';
+      content += '<label><input type="radio" name="q9" value="c"> c) Materiais que têm propriedades não encontradas na natureza</label>';
+      content += '<label><input type="radio" name="q9" value="d"> d) Materiais usados na construção de cidades inteligentes</label>';
+      content += '<label><input type="radio" name="q9" value="e"> e) Materiais utilizados na tecnologia de predição</label>';
+      content += '<p>10. Qual é o objetivo da tecnologia de Armazenamento em DNA?</p>';
+      content += '<label><input type="radio" name="q10" value="a"> a) Armazenar grandes quantidades de dados de forma durável e compacta</label>';
+      content += '<label><input type="radio" name="q10" value="b"> b) Produzir energia sem fio para uso em drones aquáticos</label>';
+      content += '<label><input type="radio" name="q10" value="c"> c) Desenvolver alimentos sintéticos com melhor sabor e textura</label>';
+      content += '<label><input type="radio" name="q10" value="d"> d) Criar interfaces cérebro-máquina para controle de dispositivos</label>';
+      content += '<label><input type="radio" name="q10" value="e"> e) Construir cidades inteligentes usando metamateriais</label>';
+      content += '<button type="button" onclick="checkAnswers()">Responder</button>';
+      content += '</form>';
+      break;
+
+    default:
+      content += '<h3>Escolha uma temática</h3>';
+  }
+
+  mainContent.innerHTML = content;
+}
+
+function checkAnswers() {
+  const correctAnswers = [
+    { answer: 'b', explanation: 'A Internet Quântica é considerada uma das tecnologias-chave da Quinta Revolução Industrial devido à sua capacidade de oferecer comunicação ultra-segura e ultra-rápida, permitindo avanços significativos em áreas como segurança da informação e processamento de dados.' },
+    { answer: 'd', explanation: 'A AIoT envolve a integração de inteligência artificial (IA) com dispositivos conectados à Internet das Coisas (IoT). A tecnologia de predição é um exemplo de aplicação da AIoT, onde algoritmos de IA são usados para prever padrões e tendências com base nos dados coletados por dispositivos IoT.' },
+    { answer: 'b', explanation: 'A "Web 3.0" refere-se à próxima fase da evolução da internet, caracterizada por uma internet descentralizada e baseada em blockchain. O metaverso é uma manifestação dessa ideia, representando um ambiente virtual tridimensional onde as pessoas podem interagir e se envolver em experiências imersivas.' },
+    { answer: 'c', explanation: 'A Smart Grid (ou rede elétrica inteligente) é uma infraestrutura que integra tecnologias de comunicação e informação para melhorar a eficiência, segurança e confiabilidade do fornecimento de energia elétrica. As Cidades Inteligentes frequentemente implementam Smart Grids como parte de suas iniciativas de modernização e sustentabilidade.' },
+    { answer: 'c', explanation: 'Um Gêmeo Digital é uma réplica virtual de um objeto físico, processo ou sistema. Ele pode ser usado para simular o comportamento do objeto real em diferentes condições, facilitando o teste, a análise e a otimização de projetos e operações.' },
+    { answer: 'b', explanation: 'A transmissão de energia sem fio é uma tecnologia que permite a transferência de energia elétrica de uma fonte para um dispositivo sem a necessidade de cabos ou fios físicos, utilizando métodos como indução magnética ou ressonância magnética.' },
+    { answer: 'c', explanation: 'Cidades Inteligentes são centros urbanos que utilizam tecnologias de informação e comunicação para gerenciar recursos e infraestrutura de forma eficiente, melhorando a qualidade de vida dos cidadãos e reduzindo os impactos ambientais.' },
+    { answer: 'b', explanation: 'A Impressão 4D envolve a fabricação de objetos tridimensionais que têm a capacidade de se adaptar e mudar de forma ou função ao longo do tempo em resposta a estímulos externos, como calor, umidade ou luz.' },
+    { answer: 'c', explanation: 'Metamateriais são materiais artificiais projetados para ter propriedades que não são encontradas em materiais naturais. Eles são fabricados usando técnicas avançadas de engenharia e são conhecidos por suas propriedades incomuns, como a capacidade de dobrar a luz ou manipular ondas sonoras.' },
+    { answer: 'a', explanation: 'A tecnologia de Armazenamento em DNA tem como objetivo armazenar grandes quantidades de dados de forma durável e compacta, aproveitando a alta densidade de armazenamento e a estabilidade do DNA como meio de armazenamento de informações.' }
+  ];
+
+  let score = 0;
+  const studentAnswers = [];
+  for (let i = 1; i <= 10; i++) {
+    const selectedAnswer = document.querySelector(`input[name=q${i}]:checked`);
+    if (selectedAnswer) {
+      studentAnswers.push({ question: i, selected: selectedAnswer.value, correct: correctAnswers[i - 1].answer, explanation: correctAnswers[i - 1].explanation });
+      if (selectedAnswer.value === correctAnswers[i - 1].answer) {
+        score++;
+      }
+    } else {
+      studentAnswers.push({ question: i, selected: null, correct: correctAnswers[i - 1].answer, explanation: correctAnswers[i - 1].explanation });
+    }
+  }
+
+  const modal = document.getElementById('modal');
+  const scoreDisplay = document.getElementById('score');
+  const correctAnswersList = document.getElementById('correct-answers');
+
+  scoreDisplay.textContent = `Pontuação: ${score}/10`;
+  correctAnswersList.innerHTML = '';
+
+  studentAnswers.forEach((answer, index) => {
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `<strong>Questão ${answer.question}:</strong> Sua resposta: ${answer.selected || 'Não respondida'}<br>Resposta correta: ${answer.correct}<br>${answer.explanation}`;
+    correctAnswersList.appendChild(listItem);
+  });
+
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
+
+function sendAnswers() {
+  const studentAnswers = [];
+  for (let i = 1; i <= 10; i++) {
+    const selectedAnswer = document.querySelector(`input[name=q${i}]:checked`);
+    studentAnswers.push({ question: i, selected: selectedAnswer ? selectedAnswer.value : 'Não respondida' });
+  }
+
+  console.log('Respostas do aluno:', studentAnswers);
+  alert('Respostas enviadas ao professor!');
+}
+
+loadContent('quinta_revolucao_industrial');
+
+</script>
+
+</body>
+</html>
